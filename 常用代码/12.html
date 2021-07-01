@@ -1,0 +1,29 @@
+<html>
+<head>
+
+<title>onscroll test</title>
+<style>
+    p{
+        height: 550px;
+    }
+</style>
+
+<script type="text/javascript">
+window.onscroll = scroll;
+
+function scroll()
+{
+ console.log("检测到页面滚动事件:"+window.pageXOffset+" "+window.pageYOffset);
+ // 注意: window.innerWidth 和 window.innerHeight 可以获得页面可见区域的宽和高.
+}
+</script>
+</head>
+
+<body>
+<p>Resize the window</p>
+<p>to a very small size,</p>
+<p>and use the scrollbars</p>
+<p>to move around the page content</p>
+<p>in the window.</p>
+</body>
+</html>

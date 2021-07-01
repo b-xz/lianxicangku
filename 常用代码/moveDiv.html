@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* #body {width:2000px;height:5000px;} */
+        #bbb{position: relative;left: 0;top: 0;width: 400px;height: 400px;background: black;}
+        #div1{height:50px;width:50px;position:absolute;background:red;top:0px;left:0px;}
+    </style>
+    <script>
+        // <!--当鼠标指针在元素内部移动时重复的触发 mosemove;-->
+        document.onmousemove=function(even)
+        {
+            var oDiv=document.getElementById('div1');
+//            document.body  Chrome专用
+            var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+            var scrollLeft=document.documentElement.scrollLeft||document.body.scrollLeft;
+                    console.log(even,'even')
+                var oEvent=even||event;
+                oDiv.style.top = scrollTop+oEvent.clientY+"px";
+                oDiv.style.left=scrollLeft+oEvent.clientX+"px";
+        }
+
+
+    </script>
+</head>
+<body id="body">
+    <div id="bbb">
+            <div id="div1" >
+    </div>
+
+</div>
+</body>
+</html>
